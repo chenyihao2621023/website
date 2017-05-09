@@ -1,0 +1,28 @@
+{
+  "apps": [
+    {
+      "name": "Website",
+      "script": "app.js",
+      "env": {
+        "COMMON_VARIABLE": "true",
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    },
+  ],
+  "deploy": {
+    "production": {
+      "user": "cyh_manager",
+      "host": "47.93.30.123",
+      "port": "39999",
+      "ref": "origin/master",
+      "repo": "https://github.com/chenyihao2621023/website.git",
+      "path": "/www/website/production",
+      "ssh_options": "StrictHostKeyChecking=no",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}
